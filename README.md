@@ -5,7 +5,9 @@
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">InfluxDB-GUI v1.1.0</h1>
 <p align="center">免费开源的influxdb时序数据库图形用户界面工具，为用户提供直观、易用的数据库管理和操作体验！</p>
 
+----
 
+简体中文|[English](README.en.md)
 
 #### 介绍
 InfluxDB-GUI是一款功能全面、操作简便的influxdb时序数据库图形界面工具，V1.0.0目前支持influxdb版本列表如下：
