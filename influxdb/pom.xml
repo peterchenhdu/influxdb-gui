@@ -136,7 +136,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.gitee.dbquery.tdgenie.AppStartup</mainClass>
+                    <mainClass>com.gitee.dbquery.influxdbgui.AppStartup</mainClass>
                     <skip>false</skip>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
