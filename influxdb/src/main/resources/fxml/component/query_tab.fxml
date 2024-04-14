@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.fxmisc.richtext.CodeArea?>
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="centPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+            <SplitPane fx:id="querySplitPane" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+                <VBox>
+                    <HBox>
+                        <padding>
+                            <Insets top="5.0"/>
+                        </padding>
+                        <HBox alignment="CENTER" fx:id="saveSqlBox" styleClass="tool-box">
+                            <padding>
+                                <Insets right="10.0" top="3.0" bottom="3"/>
+                            </padding>
+                            <ImageView fitHeight="15.0" fitWidth="15.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                                <Image url="/images/save.png"/>
+                            </ImageView>
+                            <Text>保存</Text>
+                        </HBox>
+                        <HBox alignment="CENTER" fx:id="prettySqlBox" styleClass="tool-box">
+                            <padding>
+                                <Insets right="10.0" top="3.0" bottom="3"/>
+                            </padding>
+                            <ImageView fitHeight="15.0" fitWidth="15.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                                <Image url="/images/format.png"/>
+                            </ImageView>
+                            <Text>美化SQL</Text>
+                        </HBox>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <padding>
+                            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                        </padding>
+                        <JFXComboBox fx:id="connectionComboBox" maxWidth="1.7976931348623157E308" promptText="选择连接"
+                                     GridPane.rowIndex="1" >
+
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="dbComboBox" maxWidth="1.7976931348623157E308" promptText="选择数据库"
+                                     GridPane.rowIndex="1">
+
+                        </JFXComboBox>
+                        <JFXButton fx:id="executeButton">执行</JFXButton>
+                    </HBox>
+                    <CodeArea fx:id="sqlEditArea" VBox.vgrow="ALWAYS"/>
+                </VBox>
+
+                <JFXTabPane fx:id="executeResultTabPane">
+                    <tabs>
+                        <Tab text="信息">
+                            <VBox>
+                                <HBox>
+                                    <Text text="执行SQL: "/>
+                                    <Text fx:id="executeSql"/>
+                                </HBox>
+                                <HBox>
+                                    <Text text="执行状态: "/>
+                                    <Text fx:id="executeStatus"/>
+                                </HBox>
+                                <HBox>
+                                    <Text text="执行耗时: "/>
+                                    <Text fx:id="executeCost"/>
+                                </HBox>
+                            </VBox>
+                        </Tab>
+                        <Tab text="结果">
+                            <VBox>
+                            <AnchorPane VBox.vgrow="ALWAYS">
+                                <children>
+                                    <Pagination fx:id="pagination" cache="true" AnchorPane.bottomAnchor="0.0"
+                                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                AnchorPane.topAnchor="0.0"/>
+                                    <TableView fx:id="tableView" AnchorPane.bottomAnchor="60.0"
+                                               AnchorPane.leftAnchor="0.0"
+                                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <columns/>
+                                    </TableView>
+                                </children>
+                            </AnchorPane>
+                            <HBox alignment="BOTTOM_RIGHT" >
+                                <Label fx:id="selectLocInfo" style="-fx-font-size: 12px">                                    <padding>
+                                    <Insets right="50.0" left="50"/>
+                                </padding></Label>
+                                <Label fx:id="pageInformation" style="-fx-font-size: 12px"/></HBox>
+                            </VBox>
+                        </Tab>
+
+                    </tabs>
+
+
+                </JFXTabPane>
+
+
+            </SplitPane>
+
+
+        </VBox>
+    </children>
+
+</StackPane>

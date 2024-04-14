@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="centPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+            <children>
+                <HBox fx:id="queryBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT">
+                            <children>
+                                <JFXDatePicker fx:id="beginDatePicker" maxWidth="-Infinity" prefWidth="120.0"
+                                               promptText="开始时间">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets left="6.0"/>
+                                    </padding>
+                                </JFXDatePicker>
+                                <Label text="-"/>
+                                <JFXDatePicker fx:id="endDatePicker" maxWidth="-Infinity" prefWidth="120.0"
+                                               promptText="结束时间">
+                                    <padding>
+                                        <Insets left="6.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </JFXDatePicker>
+                            </children>
+                        </HBox>
+                        <JFXButton fx:id="searchButton" text="搜索"/>
+                        <JFXButton fx:id="resetButton" text="重置"/>
+                    </children>
+                </HBox>
+                <AnchorPane VBox.vgrow="ALWAYS">
+                    <children>
+                        <Pagination fx:id="pagination" style="-fx-page-information-visible:false" cache="true" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        <TableView fx:id="tableView" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns/>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <HBox alignment="BOTTOM_RIGHT" >
+                    <Label id="selectLocInfo" style="-fx-font-size: 12px">                                    <padding>
+                        <Insets right="50.0" left="50"/>
+                    </padding></Label>
+                    <Label id="pageInformation" style="-fx-font-size: 12px"/></HBox>
+            </children>
+        </VBox>
+    </children>
+
+
+    <JFXDialog fx:id="updateRecordDialog" overlayClose="true">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="updateRecordDialogTitle">编辑数据</Label>
+            </heading>
+            <body>
+                <VBox fx:id="updateRecordPane">
+                    <children>
+
+                    </children>
+                </VBox>
+            </body>
+            <actions>
+                <JFXButton fx:id="updateRecordSaveButton" buttonType="RAISED" text="保存"/>
+                <JFXButton fx:id="updateRecordCancelButton" buttonType="RAISED" text="取消"/>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+</StackPane>

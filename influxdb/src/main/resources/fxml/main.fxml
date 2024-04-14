@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Line?>
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem fx:id="createConnectionMenuItem" mnemonicParsing="false" text="新建连接"/>
+                    </items>
+                    <items>
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" text="退出"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="工具">
+                    <items>
+                        <MenuItem fx:id="createQueryMenuItem" mnemonicParsing="false" text="新建查询"/>
+                    </items>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="监控">
+                    <items>
+<!--                        <MenuItem fx:id="connectionMonitorMenuItem" mnemonicParsing="false" text="连接监控"/>-->
+                        <MenuItem fx:id="queryMonitorMenuItem" mnemonicParsing="false" text="查询监控"/>
+<!--                        <MenuItem fx:id="resourceMonitorMenuItem" mnemonicParsing="false" text="资源监控"/>-->
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="系统">
+                    <items>
+<!--                        <MenuItem fx:id="clusterQueryMenuItem" mnemonicParsing="false" text="集群查看"/>-->
+                        <MenuItem fx:id="userQueryMenuItem" mnemonicParsing="false" text="用户查看"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="关于"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox style="-fx-border-color: #cfd3cd; -fx-border-width: 0 0 1 0;">
+            <VBox alignment="CENTER" fx:id="createConnectionBox" styleClass="tool-box">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                    <Image url="/images/connection.png"/>
+                </ImageView>
+                <Text>新建连接</Text>
+            </VBox>
+            <VBox alignment="CENTER" fx:id="createQueryBox" styleClass="tool-box">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                    <Image url="/images/query.png"/>
+                </ImageView>
+                <Text>新建查询</Text>
+            </VBox>
+<!--            <VBox alignment="CENTER" fx:id="clusterBox" styleClass="tool-box">-->
+<!--                <padding>-->
+<!--                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+<!--                </padding>-->
+<!--                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">-->
+<!--                    <Image url="/images/cluster.png"/>-->
+<!--                </ImageView>-->
+<!--                <Text>集群查看</Text>-->
+<!--            </VBox>-->
+            <VBox alignment="CENTER" fx:id="userQueryBox" styleClass="tool-box">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                    <Image url="/images/user_query.png"/>
+                </ImageView>
+                <Text>用户查看</Text>
+            </VBox>
+<!--            <VBox alignment="CENTER" fx:id="tableQueryBox" styleClass="tool-box">-->
+<!--                <padding>-->
+<!--                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+<!--                </padding>-->
+<!--                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">-->
+<!--                    <Image url="/images/tb.png"/>-->
+<!--                </ImageView>-->
+<!--                <Text>普通表查看</Text>-->
+<!--            </VBox>-->
+<!--            <VBox alignment="CENTER" fx:id="connectionsBox" styleClass="tool-box">-->
+<!--                <padding>-->
+<!--                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+<!--                </padding>-->
+<!--                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">-->
+<!--                    <Image url="/images/connections.png"/>-->
+<!--                </ImageView>-->
+<!--                <Text>连接监控</Text>-->
+<!--            </VBox>-->
+            <VBox alignment="CENTER" fx:id="queryMonitorBox" styleClass="tool-box">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                    <Image url="/images/query_monitor.png"/>
+                </ImageView>
+                <Text>查询监控</Text>
+            </VBox>
+<!--            <VBox alignment="CENTER" fx:id="resourceMonitorBox" styleClass="tool-box">-->
+<!--                <padding>-->
+<!--                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+<!--                </padding>-->
+<!--                <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true">-->
+<!--                    <Image url="/images/monitor.png"/>-->
+<!--                </ImageView>-->
+<!--                <Text>资源监控</Text>-->
+<!--            </VBox>-->
+        </HBox>
+        <SplitPane fx:id="splitPane" VBox.vgrow="ALWAYS">
+            <JFXTreeView fx:id="leftTreeView"  minWidth="100" style="-fx-background-color: #ffffff;"/>
+            <JFXTabPane fx:id="tabPane" minWidth="300"/>
+        </SplitPane>
+    </VBox>
+    <JFXDialog fx:id="dialog" overlayClose="true">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="dialogTitle">新增连接</Label>
+            </heading>
+            <body>
+                <GridPane>
+                    <children>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="1">*连接名称</Label>
+                        <JFXTextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="2">*IP地址</Label>
+                        <JFXTextField fx:id="ipTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">*端口</Label>
+                        <JFXTextField fx:id="portTextField" promptText="6041" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="4">*用户名</Label>
+                        <JFXTextField fx:id="usernameTextField" promptText="root" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="5">*密码</Label>
+                        <JFXTextField fx:id="passwordTextField" promptText="taosdata" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                    </children>
+                </GridPane>
+            </body>
+            <actions>
+                <JFXProgressBar fx:id="elementProgressBar" managed="false" maxWidth="1.7976931348623157E308"
+                                prefWidth="320" visible="false">
+                </JFXProgressBar>
+                <JFXButton fx:id="saveButton" buttonType="RAISED" text="保存"/>
+                <JFXButton fx:id="cancelButton" buttonType="RAISED" text="取消"/>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+
+    <JFXDialog fx:id="createDbDialog" overlayClose="true">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="createDbDialogTitle">新增数据库</Label>
+            </heading>
+            <body>
+                <GridPane>
+                    <children>
+                        <Label GridPane.columnIndex="0" GridPane.rowIndex="1">*库名称</Label>
+                        <JFXTextField fx:id="createDbName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+<!--                        <Label GridPane.columnIndex="0" GridPane.rowIndex="2">*副本个数</Label>-->
+<!--                        <JFXTextField fx:id="createDbReplica" promptText="1"  GridPane.columnIndex="1" GridPane.rowIndex="2"/>-->
+<!--                        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">*数据保留天数</Label>-->
+<!--                        <JFXTextField fx:id="createDbDays" promptText="3650" GridPane.columnIndex="1" GridPane.rowIndex="3"/>-->
+<!--                        <Label GridPane.columnIndex="0" GridPane.rowIndex="4">*VNODE内存块数目</Label>-->
+<!--                        <JFXTextField fx:id="createDbBlocks" promptText="6" GridPane.columnIndex="1" GridPane.rowIndex="4"/>-->
+                    </children>
+                </GridPane>
+            </body>
+            <actions>
+                <JFXButton fx:id="createDBSaveButton" buttonType="RAISED" text="保存"/>
+                <JFXButton fx:id="createDBCancelButton" buttonType="RAISED" text="取消"/>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+
+    <JFXDialog fx:id="createTbDialog" overlayClose="true">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="createTbDialogTitle">编辑Measurement</Label>
+            </heading>
+            <body>
+
+                <GridPane fx:id="createTbPane">
+                    <children>
+                        <HBox fx:id="0_tableNameHbox">
+                            <padding>
+                                <Insets right="6.0" bottom="20.0"/>
+                            </padding>
+                            <Label fx:id="0_tableNamelabel" minWidth="100" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="0">表名
+                            </Label>
+                            <JFXTextField fx:id="tableName0_TextField" minWidth="100" GridPane.columnIndex="1"
+                                          GridPane.rowIndex="0">
+                            </JFXTextField>
+                        </HBox>
+                        <Label fx:id="1_labelName" GridPane.columnIndex="0" GridPane.rowIndex="1">字段名称
+                            <padding>
+                                <Insets right="6.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="1_labelType" GridPane.columnIndex="1" GridPane.rowIndex="1">数据类型
+                            <padding>
+                                <Insets right="6.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="1_labelLength" GridPane.columnIndex="2" GridPane.rowIndex="1">长度
+                            <padding>
+                                <Insets right="6.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="1_labelIsTag" GridPane.columnIndex="3" GridPane.rowIndex="1">是否TAG
+                            <padding>
+                                <Insets right="6.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="1_labelOpt" GridPane.columnIndex="4" GridPane.rowIndex="1">操作
+                            <padding>
+                                <Insets right="6.0"/>
+                            </padding>
+                        </Label>
+                    </children>
+                </GridPane>
+            </body>
+            <actions>
+                <JFXButton fx:id="addFieldButton" text="新增字段"/>
+                <JFXButton fx:id="createTbSaveButton" buttonType="RAISED" text="保存"/>
+                <JFXButton fx:id="createTbCancelButton" buttonType="RAISED" text="取消"/>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+
+    <JFXDialog fx:id="aboutDialog" overlayClose="true">
+        <JFXDialogLayout prefWidth="600">
+            <heading>
+                <HBox>
+                    <Label>关于influxdb-gui</Label>
+                </HBox>
+            </heading>
+            <body>
+                <GridPane>
+                    <children>
+                        <HBox GridPane.rowIndex="1">
+                            <Label prefWidth="100">软件说明：</Label>
+                            <JFXTextField editable="false" prefWidth="400">InfluxDB时序数据库图形用户界面工具</JFXTextField>
+                        </HBox>
+                        <HBox GridPane.rowIndex="2">
+                            <Label prefWidth="100">软件版本：</Label>
+                            <JFXTextField editable="false" prefWidth="400">V1.0.0</JFXTextField>
+                        </HBox>
+                        <HBox GridPane.rowIndex="3">
+                            <Label prefWidth="100">问题反馈1：</Label>
+                            <JFXTextField editable="false" prefWidth="400">
+                                https://gitee.com/dbquery/influxdb-gui
+                            </JFXTextField>
+                        </HBox>
+                        <HBox GridPane.rowIndex="4">
+                            <Label prefWidth="100">问题反馈2：</Label>
+                            <JFXTextField editable="false" prefWidth="400">
+                                https://github.com/peterchenhdu/influxdb-gui
+                            </JFXTextField>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </body>
+        </JFXDialogLayout>
+    </JFXDialog>
+</StackPane>

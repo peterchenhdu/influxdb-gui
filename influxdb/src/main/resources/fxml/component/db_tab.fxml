@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="centPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+            <children>
+                <HBox fx:id="queryBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT">
+                            <children>
+                                <JFXDatePicker fx:id="beginDatePicker" maxWidth="-Infinity" prefWidth="120.0"
+                                               promptText="开始时间">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets left="6.0"/>
+                                    </padding>
+                                </JFXDatePicker>
+                                <Label text="-"/>
+                                <JFXDatePicker fx:id="endDatePicker" maxWidth="-Infinity" prefWidth="120.0"
+                                               promptText="结束时间">
+                                    <padding>
+                                        <Insets left="6.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </JFXDatePicker>
+                            </children>
+                        </HBox>
+                        <JFXButton fx:id="resetButton" text="重置"/>
+                        <JFXButton fx:id="searchButton" text="搜索"/>
+                    </children>
+                </HBox>
+                <AnchorPane VBox.vgrow="ALWAYS">
+                    <children>
+                        <Pagination fx:id="pagination" cache="true" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        <TableView fx:id="tableView" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns/>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+
+</StackPane>

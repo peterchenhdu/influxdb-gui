@@ -1,0 +1,1041 @@
+
+.root {
+
+    -fx-font-family: "Microsoft YaHei";
+
+    /**全局定义主题颜色变量 默认*/
+    -fx-main-base: #f5f6fa;
+    -fx-card-base: #ffffff;
+    -fx-bar-base: #ffffff;
+
+    /* 用于突出显示/突出显示对象。例如：selected *文本；菜单，列表，树和表中的选定项目；进度条*/
+    -fx-accent-color: #4880ff;
+    -fx-accent-suspension-color: rgba(72, 128, 255, 0.13);
+    /*边框颜色*/
+    -fx-border-base: rgba(185, 185, 185, .3);;
+    -fx-cell-border-base: rgba(185, 185, 185, 0.7);
+
+    -fx-font-base14: 14px;
+    -fx-font-base16: 16px;
+
+    /**字体颜色*/
+    -fx-dark-prompt-text-color: #ffffff;
+    -fx-light-prompt-text-color: #737373;
+    -fx-dark-text-color: #ffffff;
+    -fx-light-text-color: #404040;
+    -fx-text-color: ladder(-fx-main-base, -fx-dark-text-color 29%, -fx-light-text-color 30%);
+
+    -fx-icon-svg-color: rgb(3, 115, 248)
+
+}
+
+.backgroundPane {
+    -fx-background-color: -fx-card-base;
+}
+
+.tool-pane {
+    -fx-border-color: -fx-border-base;
+    -fx-border-width: 0 0 0.45 0;
+}
+
+.jfx-svg-glyph {
+    -fx-background-color: -fx-text-color;
+    -jfx-size: 15px
+
+}
+
+.glyph-icon {
+    -fx-fill: -fx-text-color;
+}
+
+.card-pane {
+    -fx-background-color: -fx-card-base;
+    -fx-padding: 10;
+    -fx-background-radius: 14px;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 14px;
+    -fx-effect: dropshadow(gaussian, #8f959c, 12, 0.2, 0, 0);
+
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* text和label                                                                *
+*                                                                              *
+*******************************************************************************/
+.label {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 100;
+    -fx-font-size: 14px;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Pop Up                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-popup-overlay-pane {
+    -fx-background-color: transparent;
+}
+
+.jfx-popup-container {
+    -fx-background-color: -fx-card-base;
+    -fx-background-radius: 14;
+    -fx-border-color: #313D4F;
+    -fx-border-width: 1px;
+    -fx-border-radius: 14px;
+}
+
+
+.jfx-snackbar-content {
+    -fx-background-color: #323232;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE;
+}
+
+.jfx-snackbar-action {
+    -fx-text-fill: #ff4081;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Button                                                                   *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-button {
+    -fx-padding: 0.47em 0.47em;
+    -fx-background-color: -fx-accent-color;
+    -fx-text-fill: #ffffff;
+    -jfx-button-type: RAISED;
+}
+
+.jfx-button > MaterialDesignIconView, .toggle-button > MaterialDesignIconView {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-text-color;
+    -jfx-size: 16px;
+}
+
+.jfx-toggle-button {
+    -fx-text-fill: -fx-text-color;
+}
+
+.left-pill {
+    -fx-text-fill: -fx-text-color;
+    -fx-background-insets: 0;
+    -fx-background-color: -fx-bar-base;
+    -fx-border-color: rgba(207, 207, 207, 0.5);
+    -fx-background-radius: 14 0 0 14;
+    -fx-border-radius: 14 0 0 14;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.75em; /* 4 8 4 9 */
+}
+
+.center-pill {
+    -fx-text-fill: -fx-text-color;
+    -fx-background-color: -fx-bar-base;
+    -fx-border-color: rgba(207, 207, 207, 0.5);
+    -fx-border-width: 1 1 1 0;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.right-pill {
+    -fx-text-fill: -fx-text-color;
+    -fx-background-color: -fx-bar-base;
+    -fx-border-color: rgba(207, 207, 207, 0.5);
+    -fx-background-radius: 0 14 14 0;
+    -fx-border-radius: 0 14 14 0;
+    -fx-border-width: 1 1 1 0;
+    -fx-background-insets: 0;
+
+}
+
+.left-pill:hover {
+    -fx-background-color: derive(-fx-bar-base, -20%)
+}
+
+.left-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 14 0 0 14;
+}
+
+.left-pill:pressed {
+    -fx-background-color: derive(-fx-bar-base, -30%)
+}
+
+.center-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0, 0, 0, 0, 0;
+}
+
+.center-pill:hover {
+    -fx-background-color: derive(-fx-bar-base, -20%)
+}
+
+.center-pill:pressed {
+    -fx-background-color: derive(-fx-bar-base, -30%)
+}
+
+.right-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 14 14 0;
+}
+
+.right-pill:hover {
+    -fx-background-color: derive(-fx-bar-base, -20%)
+}
+
+.right-pill:pressed {
+    -fx-background-color: derive(-fx-bar-base, -30%)
+}
+
+.toggle-button:selected .left-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 14 0 0 14;
+}
+
+.toggle-button:selected .center-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.toggle-button:selected .right-pill:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 14 14 0
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Decorator                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-decorator {
+    -fx-decorator-color: -fx-main-base;
+    -fx-background-color: -fx-main-base;
+    -fx-background-radius: 11;
+}
+
+.jfx-decorator .jfx-decorator-buttons-container {
+    -fx-background-color: -fx-decorator-color;
+}
+
+.jfx-decorator .resize-border {
+    -fx-border-color: -fx-decorator-color;
+    -fx-border-width: 0 4 4 4;
+}
+
+.jfx-decorator .jfx-decorator-title-container .jfx-decorator-text {
+    -fx-fill: -fx-text-color;
+    -fx-font-size: 16px;
+}
+
+.jfx-decorator .jfx-decorator-title-container .jfx-svg-glyph {
+    -fx-shape: "M557 114c7.9 0 15.4 3.1 21.1 8.9 5.7 5.7 8.9 13.2 8.9 21.1V198.9l33.1 11.9c9.6 3.5 19.2 7.4 28.4 11.8l31.8 15 24.9-24.9 13.9-13.9c5.6-5.6 13.1-8.7 21.2-8.7s15.6 3.1 21.2 8.7l63.6 63.6c5.6 5.6 8.7 13.1 8.7 21.2s-3.1 15.6-8.7 21.2l-13.9 13.9-24.9 24.9 15 31.8c4.4 9.2 8.3 18.8 11.8 28.4l11.9 33.1h55c7.9 0 15.4 3.1 21.1 8.9 5.7 5.7 8.9 13.2 8.9 21.1v90c0 7.9-3.1 15.4-8.9 21.1-5.7 5.7-13.2 8.9-21.1 8.9H825.1L813.2 620c-3.5 9.6-7.4 19.2-11.8 28.4l-15 31.8 24.9 24.9 13.9 13.9c5.6 5.6 8.7 13.1 8.7 21.2s-3.1 15.6-8.7 21.2L761.6 825c-5.6 5.6-13.1 8.7-21.2 8.7s-15.6-3.1-21.2-8.7l-13.9-13.9-24.9-24.9-31.8 15c-9.2 4.4-18.8 8.3-28.4 11.8L587 825.2V880c0 7.9-3.1 15.4-8.9 21.1-5.7 5.7-13.2 8.9-21.1 8.9h-90c-7.9 0-15.4-3.1-21.1-8.9-5.7-5.7-8.9-13.2-8.9-21.1V825.1l-33.1-11.9c-9.6-3.5-19.2-7.4-28.4-11.8l-31.8-15-24.9 24.9-13.9 13.9c-5.6 5.6-13.1 8.7-21.2 8.7s-15.6-3.1-21.2-8.7l-63.6-63.6c-5.6-5.6-8.7-13.1-8.7-21.2s3.1-15.6 8.7-21.2l13.9-13.9 24.9-24.9-15-31.8c-4.4-9.2-8.3-18.8-11.8-28.4L198.8 587H144c-7.9 0-15.4-3.1-21.1-8.9-5.7-5.7-8.9-13.2-8.9-21.1v-90c0-7.9 3.1-15.4 8.9-21.1 5.7-5.7 13.2-8.9 21.1-8.9H198.9l11.9-33.1c3.5-9.6 7.4-19.2 11.8-28.4l15-31.8-24.9-24.9-13.9-13.9c-5.6-5.6-8.7-13.1-8.7-21.2s3.1-15.6 8.7-21.2l63.6-63.6c5.6-5.6 13.1-8.7 21.2-8.7s15.6 3.1 21.2 8.7l13.9 13.9 24.9 24.9 31.8-15c9.2-4.4 18.8-8.3 28.4-11.8l33.1-11.9v-55c0-7.9 3.1-15.4 8.9-21.1 5.7-5.7 13.2-8.9 21.1-8.9H557m0-50h-90c-44 0-80 36-80 80v19.7c-11.2 4-22.2 8.6-32.9 13.6l-13.9-13.9c-15.6-15.6-36.1-23.3-56.6-23.3s-41 7.8-56.6 23.3L163.4 227c-31.1 31.1-31.1 82 0 113.1l13.9 13.9c-5.1 10.7-9.6 21.7-13.6 32.9H144c-44 0-80 36-80 80v90c0 44 36 80 80 80h19.7c4 11.2 8.6 22.2 13.6 32.9l-13.9 13.9c-31.1 31.1-31.1 82 0 113.1l63.6 63.6c15.6 15.6 36.1 23.3 56.6 23.3s41-7.8 56.6-23.3l13.9-13.9c10.7 5.1 21.7 9.6 32.9 13.6V880c0 44 36 80 80 80h90c44 0 80-36 80-80v-19.7c11.2-4 22.2-8.6 32.9-13.6l13.9 13.9c15.6 15.6 36.1 23.3 56.6 23.3s41-7.8 56.6-23.3l63.6-63.6c31.1-31.1 31.1-82 0-113.1L846.7 670c5.1-10.7 9.6-21.7 13.6-32.9H880c44 0 80-36 80-80v-90c0-44-36-80-80-80h-19.7c-4-11.2-8.6-22.2-13.6-32.9l13.9-13.9c31.1-31.1 31.1-82 0-113.1L797 163.4c-15.6-15.6-36.1-23.3-56.6-23.3s-41 7.8-56.6 23.3l-13.9 13.9c-10.7-5.1-21.7-9.6-32.9-13.6V144c0-44-36-80-80-80z";
+    -jfx-size: 20px;
+    -fx-background-color: #29AAE3;
+}
+
+.jfx-decorator-button {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-text-color;
+    -jfx-button-type: FLAT;
+    -fx-background-color: TRANSPARENT
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX Hamburger Icon                                                           *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-hamburger {
+    -fx-padding: 10.0;
+    -fx-spacing: 4px;
+    -fx-cursor: hand;
+}
+
+.jfx-hamburger StackPane {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 4px;
+    -fx-background-color: -fx-text-color;
+    -fx-background-radius: 5px;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX 滚动条                                                      *
+*                                                                              *
+*******************************************************************************/
+.corner, .track, .increment-arrow, .decrement-arrow, .increment-button, .decrement-button, .scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: TRANSPARENT;
+}
+
+
+.thumb {
+    -fx-background-color: ladder(-fx-main-base, rgba(255, 255, 255, .3) 29%, rgba(0, 0, 0, 0.3) 30%);
+    -fx-border-color: TRANSPARENT;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-width: 0.5;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Tool Bar                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-tool-bar {
+    -fx-background-color: -fx-card-base;
+    -fx-border-color: -fx-border-base;
+    -fx-border-width: 0 0 0 0;
+    -fx-pref-width: 100.0%;
+    -fx-pref-height: 48.0px;
+}
+
+.jfx-tool-bar HBox {
+    -fx-alignment: center;
+    -fx-spacing: 7.0;
+    -fx-padding: 0 0 0 0;
+}
+
+
+.tool-bar-button {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-text-color;
+    -fx-pref-height: 40;
+    -fx-pref-width: 40;
+    -fx-background-radius: 20;
+    -jfx-button-type: FLAT;
+    -fx-background-color: TRANSPARENT
+}
+
+.tool-bar-button > .jfx-svg-glyph {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-text-color;
+    -jfx-size: 20px;
+}
+
+.tool-bar-button:hover {
+    -fx-background-color: ladder(-fx-main-base, rgba(255, 255, 255, .2) 29%, rgba(0, 0, 0, .2) 30%);
+}
+
+.tool-bar-button:focused {
+    -fx-background-color: TRANSPARENT
+}
+
+.tool-bar-toggle {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-pref-height: 32;
+    -fx-pref-width: 32;
+    -fx-background-radius: 16;
+    -fx-background-color: ladder(-fx-main-base, rgba(255, 255, 255, .2) 29%, rgba(0, 0, 0, .2) 30%);
+}
+
+.tool-bar-toggle > .jfx-svg-glyph {
+    -fx-fill: -fx-text-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-text-color;
+    -jfx-size: 20px;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX TabPane                                                          *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-tab-pane .tab-header-area .tab-down-button {
+    -fx-background-color: #29AAE3;
+    -fx-min-width: 0.8em;
+    -fx-max-width: 0.8em;
+    -fx-min-height: 1.3em;
+    -fx-max-height: 1.3em;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: -fx-card-base;
+}
+
+.jfx-tab-pane .headers-region .tab-selected-line {
+    -fx-background-color: -fx-accent-color;
+    -fx-pref-height: 3px;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-label {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-graphic-text-gap: 10;
+    -fx-padding: 6 10 6 10;
+}
+
+.jfx-tab-pane .headers-region .tab:selected .tab-container .tab-label {
+    -fx-text-fill: -fx-text-color;
+
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button > .jfx-svg-glyph {
+    -fx-background-color: -fx-text-color;
+    -jfx-size: 10px;
+
+
+}
+
+.jfx-tab-pane .headers-region .tab {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 200px;
+}
+
+.jfx-tab-pane .headers-region .tab:closable {
+    -fx-border-color: rgba(0, 0, 0, 0);
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-radius: 20;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button:hover {
+    -fx-background-color: derive(-fx-text-color, 90%)
+
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button:focused {
+    -fx-background-color: TRANSPARENT;
+}
+
+.jfx-tab-pane .headers-region .tab:hover .tab-container .tab-close-button > .jfx-svg-glyph {
+    -fx-background-color: derive(-fx-text-color, 30%);
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .jfx-svg-glyph {
+    -fx-background-color: derive(-fx-text-color, 20%);
+    -jfx-size: 20;
+}
+
+
+.jfx-tab-pane .headers-region > .tab:hover {
+    -fx-background-color: derive(-fx-accent-suspension-color, 20%)
+}
+
+.jfx-tab-pane .headers-region > .tab:selected {
+    -fx-background-color: -fx-accent-suspension-color;
+}
+
+.tab-content {
+    -fx-background-color: -fx-main-base;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX List View                                                                *
+*                                                                              *
+*******************************************************************************/
+
+
+.jfx-list-cell {
+    -fx-background-insets: 0.0;
+    -fx-text-fill: -fx-text-color;
+}
+
+.jfx-list-cell:odd,
+.jfx-list-cell:even {
+    -fx-background-color: transparent;
+}
+
+.jfx-list-cell:filled:hover,
+.jfx-list-cell:selected .label {
+    -fx-background-color: derive(-fx-accent-suspension-color, 20%)
+}
+
+.jfx-list-cell .jfx-rippler {
+    -jfx-rippler-fill: #5264AE;
+}
+
+.jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: -fx-accent-color;
+    -fx-background-radius: 6;
+    -fx-border-color: -fx-accent-color;
+}
+
+.jfx-list-view {
+    -fx-background-color: transparent;
+}
+
+
+.navigation-list .jfx-list-cell {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+
+.navigation-list .jfx-list-cell .label {
+    -fx-graphic-text-gap: 15;
+    -fx-pref-height: 45;
+    -fx-padding: 0 0 0 25;
+}
+
+
+.navigation-list .jfx-list-cell .label > .jfx-svg-glyph {
+    -jfx-size: 20px;
+    -fx-alignment: center;
+    -fx-background-color: -fx-icon-svg-color;
+}
+
+.navigation-list .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.navigation-list .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: -fx-accent-color;
+    -fx-background-insets: 0 20 0 20;
+    -fx-background-radius: 6;
+    -fx-border-color: -fx-accent-color;
+    -fx-border-width: 0 0 0 4;
+}
+
+.navigation-list {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0.0;
+    -fx-background-color: -fx-card-base;
+    -jfx-cell-horizontal-margin: 0.0;
+    -jfx-cell-vertical-margin: 0.0;
+    -jfx-expanded: true;
+
+}
+
+.navigation-list .jfx-rippler {
+    -jfx-rippler-fill: derive(-fx-accent-color, -20%);
+}
+
+#navigation-menu {
+    -fx-background-color: #F9F9F9;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX SUBLIST IMPORTANT                                                        *
+*                                                                              *
+*******************************************************************************/
+.sublist .scroll-bar:vertical .increment-arrow,
+.sublist .scroll-bar:vertical .decrement-arrow,
+.sublist .scroll-bar:vertical .increment-button,
+.sublist .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0;
+}
+
+.sublist .scroll-bar:vertical .track,
+.sublist .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-text-color;
+}
+
+.sublist {
+
+    /* important to hide the list change of height */
+    -fx-background-radius: 0;
+    -fx-background-insets: 0.0;
+    -jfx-cell-horizontal-margin: 0.0;
+    -jfx-cell-vertical-margin: 0.0;
+    -jfx-expanded: true;
+    -fx-padding: 0;
+    -fx-background-color: TRANSPARENT;
+}
+
+
+.sublist .jfx-list-cell {
+    -fx-background-insets: 0.0;
+    -fx-padding: 0 0 0 35;
+    -fx-text-fill: -fx-text-color;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 0 0;
+}
+
+
+.sublist-header {
+    -fx-alignment: center-left;
+    -fx-padding: 0;
+}
+
+.sublist-header .sub-label {
+    -fx-padding: 0 0 0 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * TableView                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.table-view, .tree-table-view {
+    /* Constants used throughout the tableview. */
+    -fx-background-color: -fx-card-base;
+    -fx-table-header-border-color: #700128;
+    -fx-table-cell-border-color: -fx-cell-border-base;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-width: 0.6;
+    -fx-border-color: -fx-border-base;
+    -fx-background-insets: 0;
+    -fx-padding: -0.9;
+}
+
+.table-view:focused {
+    -fx-background-insets: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-border-base;
+    /*-fx-background-insets: 10 10 0 0;*/
+    -fx-background-radius: 14px 14px 0 0;
+    -fx-border-radius: 14px 14px 0 0;
+    -fx-pref-height: 30;
+}
+
+/**列头行设置背景*/
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+/**TableView列头文本标签*/
+.table-view .column-header .label {
+    -fx-alignment: center;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 300;
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 14px;
+}
+
+/**TableView列头展示隐藏列按钮*/
+.table-view > .column-header-background > .show-hide-columns-button {
+    -fx-background-color: transparent;
+}
+
+/*表格内容区域*/
+.table-view .placeholder {
+    -fx-background-color: transparent;
+}
+
+
+.table-column {
+    -fx-pref-height: 30;
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+    -fx-border-width: 0.4;
+}
+
+/*表格内容区域每行的样式*/
+.table-view .table-row-cell {
+    -fx-border-color: -fx-cell-border-base;
+    -fx-border-width: 0 0 0.4 0;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell .table-cell {
+    -fx-pref-height: 30;
+    -fx-alignment: center;
+    -fx-border-width: 0.4;
+}
+
+.table-cell:selected {
+    -fx-background-color: #29AAE3;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: transparent;
+}
+
+/*.table-row-cell .text {*/
+/*    -fx-fill: -fx-text-color;*/
+/*}*/
+
+/*TableView的单元之间去掉没有数据的竖线 */
+.table-view .table-row-cell:empty, .table-view .table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: -fx-accent-suspension-color;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-border-color: -fx-cell-border-base;
+}
+
+/*******************************************************************************
+*                                                                              *
+* splitPane                                                                *
+*                                                                              *
+*******************************************************************************/
+.split-pane {
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: transparent;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 5 0 5; /* 0 3 0 3 */
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * TreeView and TreeCell                                                       *
+ *                                                                             *
+ ******************************************************************************/
+.tree-view {
+    -fx-background-color: transparent;
+}
+
+
+.tree-cell {
+    -fx-padding: 0.25em; /* 3 */
+    -fx-indent: 1em;
+    -fx-text-fill: -fx-text-color;
+    -fx-background-color: transparent;
+}
+
+.tree-cell:selected {
+    -fx-background-color: -fx-accent-suspension-color;
+    -fx-text-fill: -fx-accent-color;
+}
+
+
+.tree-cell > .tree-disclosure-node,
+.tree-table-row-cell > .tree-disclosure-node {
+    -fx-padding: 4 6 4 8;
+    -fx-background-color: transparent;
+}
+
+.tree-cell > .tree-disclosure-node > .arrow,
+.tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: -fx-text-color;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow,
+.tree-table-row-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-rotate: 90;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * JFXTextField                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area, .jfx-combo-box {
+    -fx-background-color: transparent;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-weight: 400;
+    -fx-text-fill: -fx-text-color;
+    -fx-prompt-text-fill: -fx-light-prompt-text-color;
+    -fx-alignment: top-left;
+    -jfx-focus-color: -fx-text-color;
+    -jfx-unfocus-color: -fx-light-prompt-text-color;
+}
+
+.jfx-text-field > .input-line,
+.jfx-password-field > .input-line,
+.jfx-text-area > .input-line,
+.jfx-combo-box > .input-line {
+    -fx-background-color: -jfx-unfocus-color;
+    -fx-pref-height: .45;
+    -fx-translate-y: 1px;
+}
+
+.jfx-text-field > .input-focused-line,
+.jfx-password-field > .input-focused-line,
+.jfx-text-area > .input-focused-line,
+.jfx-combo-box > .input-focused-line {
+    -fx-background-color: -jfx-focus-color;
+    -fx-pref-height: 1px;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Dialog Layout                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+
+.jfx-dialog, .jfx-dialog-layout {
+    -fx-background-color: -fx-card-base;
+    -fx-background-radius: 14;
+}
+
+.jfx-dialog-overlay-pane, .jfx-alert-overlay {
+    -fx-background-color: rgba(0.0, 0.0, 0.0, 0.2);
+}
+
+.jfx-dialog-content, .jfx-alert-content-container {
+    -fx-background-color: transparent;
+
+    -fx-border-color: #313D4F;
+    -fx-border-width: 1px;
+    -fx-border-radius: 14px;
+}
+
+
+.jfx-layout-heading .label {
+    -fx-font-size: 20px;
+}
+
+/*******************************************************************************
+*                                                                              *
+* Error Facade                                                                 *
+*                                                                              *
+*******************************************************************************/
+
+.error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+    -fx-font-weight: bold;
+}
+
+.error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error, .jfx-combo-box:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .error-label, .jfx-password-field .error-label, .jfx-text-area .error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.65em;
+    -fx-font-family: -fx-font-family
+}
+
+.jfx-text-field .error-icon, .jfx-password-field .error-icon, .jfx-text-area .error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.jfx-scroll-pane .main-header {
+    /*-fx-background-image: url("../bg1.jpg");*/
+}
+
+.jfx-scroll-pane .condensed-header {
+    /*-fx-background-image: url("../bg4.jpg");*/
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Spinner                                                                  *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-spinner .arc {
+    -fx-stroke-width: 3.0;
+}
+
+.first-spinner {
+    -jfx-radius: 20;
+}
+
+.first-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.second-spinner {
+    -jfx-radius: 30;
+}
+
+.second-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.third-spinner {
+    -jfx-radius: 40;
+}
+
+.third-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.fourth-spinner {
+    -jfx-radius: 50;
+}
+
+.fourth-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.fifth-spinner {
+    -jfx-radius: 60;
+}
+
+.fifth-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.sixth-spinner {
+    -jfx-radius: 70;
+}
+
+.sixth-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.seventh-spinner {
+    -jfx-radius: 80;
+}
+
+.seventh-spinner .arc {
+    -fx-stroke-width: 5.0;
+}
+
+.blue-spinner .arc {
+    -fx-stroke: #4285f4;
+}
+
+.blue-spinner .track {
+    -fx-stroke: #d0d0d0;
+}
+
+.red-spinner .arc {
+    -fx-stroke: #db4437;
+}
+
+.green-spinner .arc {
+    -fx-stroke: #0F9D58;
+}
+
+.yellow-spinner .arc {
+    -fx-stroke: #f4b400;
+}
+
+.materialDesign-purple:indeterminate .arc {
+    -fx-stroke: #ab47bc;
+}
+
+.materialDesign-blue .arc {
+    -fx-stroke: #2962ff;
+}
+
+.materialDesign-blue .percentage {
+    -fx-fill: #ab47bc;
+}
+
+.materialDesign-cyan .arc {
+    -fx-stroke: #00b8d4;
+}
+
+.materialDesign-green .arc {
+    -fx-stroke: #00c853;
+}
+
+.materialDesign-green .text {
+    visibility: false;
+}
+
+.materialDesign-yellow .arc {
+    -fx-stroke: #ffd600;
+}
+
+.materialDesign-orange .arc {
+    -fx-stroke: #ff6d00;
+}
+
+.materialDesign-red .arc {
+    -fx-stroke: #d50000;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* tile                                                                  *
+*                                                                              *
+*******************************************************************************/
+.tile {
+    -BACKGROUND: rgb(255, 255, 255);
+    -FOREGROUND: rgb(52, 52, 52);
+    -GRAY: rgb(139, 144, 146);
+    -RED: rgb(229, 80, 76);
+    -LIGHT_RED: rgb(255, 84, 56);
+    -GREEN: rgb(143, 198, 94);
+    -LIGHT_GREEN: rgb(132, 228, 50);
+    -BLUE: rgb(55, 179, 252);
+    -DARK_BLUE: rgb(55, 94, 252);
+    -ORANGE: rgb(237, 162, 57);
+    -YELLOW_ORANGE: rgb(229, 198, 76);
+    -YELLOW: rgb(229, 229, 76);
+    -MAGENTA: rgb(198, 75, 232);
+    -PINK: rgb(233, 14, 139);
+
+    -foreground-color: -FOREGROUND;
+
+    -fx-effect: dropshadow(gaussian, #8f959c, 12, 0, 0, 0);
+
+}
+
+.tile .chart-vertical-grid-lines {
+    -fx-stroke: #9d9d9d;
+    -fx-stroke-dash-array: null;
+}
+
+.tile .chart-horizontal-grid-lines {
+    -fx-stroke: #9d9d9d;
+    -fx-stroke-dash-array: null;
+}
+
+.tile .axis {
+    AXIS_COLOR: #454545;
+    -fx-tick-label-fill: #454545;
+}
+
+#status-success-label {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #1ea681;
+    -fx-background-radius: 10;
+    -fx-padding: 5 10 5 10;
+}
+
+#status-error-label {
+    -fx-background-color: #e63c53;
+    -fx-background-radius: 10;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5 10 5 10;
+}
+
+
+.icons-badge .badge-pane {
+    -fx-background-color: #ff4081;
+    -fx-background-radius: 20;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+    -fx-alignment: center;
+}
+
+.icons-badge Label {
+    -fx-font-size: 14.0px;
+    -fx-text-fill: WHITE;
+}
+
+
+.tool-box:hover {
+    -fx-background-color: #D8E6F2
+}
+
