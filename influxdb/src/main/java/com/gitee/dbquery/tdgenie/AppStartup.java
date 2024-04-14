@@ -75,7 +75,7 @@ public class AppStartup extends Application {
         wfxDecorator.setGraphic(new SVGGlyph(""));
 
         scene = new Scene(wfxDecorator);
-        stage.setTitle("influxdb-gui");
+        stage.setTitle("influxdb-gui v1.0.0");
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.setX(PropertiesUtils.getDouble(sysConfigProperties, WINDOW_X_PROPERTY, 100.));
