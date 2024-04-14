@@ -308,7 +308,7 @@ public class RecordTabController {
         });
 
         ContextMenu menu = new ContextMenu();
-        menu.getItems().addAll(addItem, editItem, copyItem, copyInsertItem);
+        menu.getItems().addAll(copyItem);
         tableView.setContextMenu(menu);
 
         FilteredList<Map<String, Object>> filteredData = new FilteredList<>(dataModelMapList, p -> true);

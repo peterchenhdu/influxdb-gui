@@ -1,37 +1,47 @@
-# influxdb-gui
+<p align="center">
+	<img alt="logo" src="https://gitee.com/dbquery/influxdb-gui/raw/master/influxdb/src/main/resources/images/logo.png" width="150" height="150">
+</p>
+
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">InfluxDB-GUI v1.1.0</h1>
+<p align="center">免费开源的influxdb时序数据库图形用户界面工具，为用户提供直观、易用的数据库管理和操作体验！</p>
+
+
 
 #### 介绍
-免费开源的InfluxDB时序数据库图形用户界面工具（GUI），为用户提供直观、易用的数据库管理和操作体验！
+InfluxDB-GUI是一款功能全面、操作简便的influxdb时序数据库图形界面工具，V1.0.0目前支持influxdb版本列表如下：
+1. influxdb 1.8.10版本
 
+主要功能：
+1. 数据连接维护（新增、修改、查询、删除）
+2. 数据库维护（新增、修改、查询、删除）
+3. MEASUREMENT维护（查询、删除）
+4. MEASUREMENT数据查询（支持按时间查询，自动分页展示）
+5. 数据操作（复制字段值）
+6. 自定义SQL执行(可执行更新SQL或查询SQL，可展示查询结果、执行耗时、错误信息等) 
+7. 用户查看
+8. 查询监控（监控正在执行的查询SQL）
 #### 软件架构
-JavaFx
+基于JavaFX实现UI功能。
 
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  从发行版中下载最新版本，解压，双击执行influxdb-gui.exe文件即可(https://gitee.com/dbquery/influxdb-gui/releases)
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
+1.  初始界面
+2. 数据连接维护（新增、修改、查询、删除）
+3. 数据库维护（新增、修改、查询、删除）
+4. MEASUREMENT维护（查询、删除）
+5. MEASUREMENT数据查询（支持按时间查询，自动分页展示）
+6. 数据操作（复制字段值）
+7. 自定义SQL执行(可执行更新SQL或查询SQL，可展示查询结果、执行耗时、错误信息等) 
+8. 用户查看
+9. 查询监控（监控正在执行的查询SQL）
 #### 参与贡献
 
 1.  Fork 本仓库
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
